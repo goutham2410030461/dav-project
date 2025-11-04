@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Delivery Time Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Food Delivery Time Prediction</h1>
+    <p class="subtitle">A Data Analytics & Visualization Project</p>
+  </header>
+
+  <nav class="nav">
+    <a href="{{ url_for('index') }}" class="active">Home</a>
+    <a href="{{ url_for('visualize') }}">Visualization</a>
+    <a href="{{ url_for('predict') }}">Prediction</a>
+    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p>
+        This website analyzes and predicts food delivery time using a simple, interpretable model.
+        It also provides clean visualizations to understand how factors like <strong>distance</strong>,
+        <strong>weather</strong>, <strong>traffic</strong>, and <strong>order volume</strong> affect delivery time.
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Dataset</h3>
+        <p>50+ rows with categorical Weather (Sunny, Cloudy, Rainy, Stormy) and Traffic (Low, Normal, Moderate, High).</p>
+      </div>
+      <div class="card">
+        <h3>Model</h3>
+        <p>OneHotEncoder + Linear Regression (scikit-learn). Easy to explain in viva.</p>
+      </div>
+      <div class="card">
+        <h3>Visualizations</h3>
+        <p>Scatter (Distance vs Delivery Time) and bar charts for Weather & Traffic.</p>
+      </div>
+      <div class="card">
+        <h3>Deployment</h3>
+        <p>Flask app, deployable on Render with Gunicorn. Instructions in README.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© {{ 2025 }} Food Delivery Time Prediction — Academic Submission</small>
+  </footer>
+</body>
+</html>

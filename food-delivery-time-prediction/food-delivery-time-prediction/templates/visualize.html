@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualization</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Data Visualization</h1>
+    <p class="subtitle">Explore patterns before predicting</p>
+  </header>
+
+  <nav class="nav">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('visualize') }}" class="active">Visualization</a>
+    <a href="{{ url_for('predict') }}">Prediction</a>
+  </nav>
+
+  <main class="container">
+    <div class="card plot">{{ chart1 | safe }}</div>
+    <div class="card plot">{{ chart2 | safe }}</div>
+    <div class="card plot">{{ chart3 | safe }}</div>
+  </main>
+
+  <footer class="footer">
+    <small>© {{ 2025 }} Food Delivery Time Prediction</small>
+  </footer>
+</body>
+</html>
